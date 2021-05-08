@@ -14,10 +14,12 @@
 
 <h4>Allure report</h4>
 1. To run tests and generate Allure report:
+
 ```
 mvn clean test
 ```
 2. To see a report: 
+
 ```
 allure serve path_to_allure_results_folder/allure-results
 ```
