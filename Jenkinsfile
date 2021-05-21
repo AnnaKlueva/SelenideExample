@@ -19,8 +19,10 @@ pipeline {
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
-        stage('Reports') {
-            steps {
+    }
+    
+    post {
+            always {
             script {
                     allure([
                             includeProperties: false,
@@ -32,5 +34,4 @@ pipeline {
             }
             }
         }
-    }
 }
