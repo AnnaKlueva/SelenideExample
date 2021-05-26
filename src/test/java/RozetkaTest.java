@@ -8,10 +8,12 @@ import pages.ProductPage;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static com.codeborne.selenide.WebDriverRunner.url;
 
 public class RozetkaTest extends SelenideRunner {
 
-    @Test
+    //@Test
     public void userCanLogin() {
         open("http://example.com/login");
         $(byName("user.name")).setValue("johny");
@@ -37,6 +39,7 @@ public class RozetkaTest extends SelenideRunner {
         for(SelenideElement item: searchResults){
             item.shouldHave(text(searchWord));
         }
+
     }
 
     @Test
